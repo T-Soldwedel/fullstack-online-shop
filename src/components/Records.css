@@ -1,0 +1,22 @@
+.products {
+    margin: 4rem 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.products div {
+    width: 11rem;
+}
+
+.flex-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stars {
+    padding-bottom: 1rem;
+}
