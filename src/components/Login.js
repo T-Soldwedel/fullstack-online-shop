@@ -3,7 +3,7 @@ import { useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { MyContext } from "../context/MyContext";
 import { useNavigate } from "react-router-dom";
-import "./Login.css"
+import "./Login.css";
 
 export default function Login() {
   const { setUser } = useContext(MyContext);
@@ -23,7 +23,7 @@ export default function Login() {
         const token = res.headers.get("token");
         localStorage.setItem("token", token);
         return res.json();
-      }) // parse json data in the body
+      })
       .then((result) => {
         if (result.success) {
           toast.success("Successfully LoggedIn ! ");

@@ -1,0 +1,21 @@
+.profile-container {
+    padding: 2rem;
+    margin-top: 3rem;
+    background-color: rgba(217, 162, 162, 0.821);
+
+    
+}
+
+.profile-flex-container {
+    margin: 10rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgb(185, 48, 48);
+}
+
+.profile-user-details {
+    padding: 1rem;
+    background-color: blueviolet;
+    width:10rem;
+}

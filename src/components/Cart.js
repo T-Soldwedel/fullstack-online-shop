@@ -11,19 +11,17 @@ export default function Cart() {
       setCart(cart.filter((item) => item._id !== id));
     } else {
       foundRecord.quantity--;
-      setCart([...cart]); // forcing rerendering
+      setCart([...cart]);
     }
   };
 
   const incrementQuantity = (id) => {
     const foundRecord = cart.find((item) => item._id === id);
     foundRecord.quantity++;
-    setCart([...cart]); // forcing rerendering
+    setCart([...cart]);
   };
 
   const placeOrder = () => {
-    //order => { records: [record._id, record._id ], totalPrice: numberValue, userId:3276123zf132}
-
     if (!user) {
       navigate("/login");
     } else {

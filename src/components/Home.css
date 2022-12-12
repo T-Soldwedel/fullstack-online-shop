@@ -1,0 +1,81 @@
+.home-container {
+    background-image: linear-gradient(to right bottom, #f5ce4d, #ffbb65, #ffae7e, #f1a594, #d9a2a2);
+}
+
+.typewriter {
+    text-align: center;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 6.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(181, 46, 46); }
+  }
+/* 
+rgb(245, 206, 77)
+#F5CE4D
+
+rgba(217, 162, 162, 0.821)
+#D9A2A2 
+*/
+.home-products {
+    /* margin: 4rem 5rem; */
+    margin-top: .21rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  
+    background-image: linear-gradient(to right bottom, #f5ce4d, #ffbb65, #ffae7e, #f1a594, #d9a2a2);;
+    padding: 2rem;
+    
+  }
+  
+  .single-product {
+    width: 18rem;
+    height: fit-content;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    color: rgb(0, 0, 0);
+    font-size: .8rem;
+  }
+  
+  .home-products img {
+    width: 16rem;
+    margin-bottom: 1rem;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .stars {
+    padding-bottom: 1rem;
+  }
+  
+  .cartButton {
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .cartButton:hover {
+      background-color: rgb(162, 219, 238);
+    }

@@ -1,6 +1,5 @@
 import { NavLink, Routes, Route } from "react-router-dom";
 import React, { useContext } from "react";
-import HomePage from "./components/HomePage";
 import Cart from "./components/Cart";
 import Login from "./components/Login";
 import Orders from "./components/Orders";
@@ -11,6 +10,8 @@ import { MyContext } from "./context/MyContext";
 import EditProfileUser from "./components/EditProfileUser";
 import "./App.css";
 import AdminPanel from "./components/AdminPanel";
+import logo from "./img/logo.svg"
+import Home from "./components/Home";
 
 function App() {
   const { cart, user } = useContext(MyContext);
@@ -18,82 +19,95 @@ function App() {
   return (
     <div className="App">
       <ul className="navbar">
+
+        <div>
         <li>
-          <NavLink to="/">Home </NavLink>
+          <NavLink to="/">
+          <img src={logo} alt=""></img>
+          </NavLink>
         </li>
-        <li>
-          <NavLink to="/records">Records </NavLink>
+          
+        </div>
+        <div className="navlinks">        
+
+        <li className="border-bottom">
+          <NavLink to="/records">Products </NavLink>
         </li>
         {user ? (
           <>
-            <li>
-              <NavLink to="/orders">Orders </NavLink>
-            </li>
-            <li>
+            <li className="border-bottom">
               <NavLink to="/profile"> Profile</NavLink>
+            </li>
+            <li className="border-bottom">
+              <NavLink to="/orders">Orders </NavLink>
             </li>
           </>
         ) : (
           <>
-            <li>
+            <li className="border-bottom">
               <NavLink to="/login">Login </NavLink>
             </li>
-            <li>
+            <li className="border-bottom">
               <NavLink to="/signup">Signup </NavLink>
             </li>
           </>
         )}
         {user && user.role === "admin" && (
-          <li>
+          <li className="border-bottom">
             <NavLink to="/admin">Admin panel</NavLink>
           </li>
         )}
-        <li>
+        <li className="border-bottom">
           <NavLink to="/cart">
             Cart <sup>{cart.length}</sup>{" "}
           </NavLink>
         </li>
 
         <li class="nav-item dropdown">
-                <a class="nav-link" href="#3" data-bs-toggle="dropdown">
-                  <NavLink className="NavLink" to="shows">
-                    Shows
-                  </NavLink>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="#ladida">
-                      <NavLink className="NavLink-show" to="shows/ladida">
-                        Ladida
-                      </NavLink>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#dings">
-                      <NavLink className="NavLink-show" to="shows/dings">
-                        Dings
-                      </NavLink>
-                    </a>
-                  </li>
+          <a class="nav-link" href="#3" data-bs-toggle="dropdown">
+            <NavLink className="NavLink" to="shows">
+              Shows
+            </NavLink>
+          </a>
 
-                  <li>
-                    <a class="dropdown-item" href="#triomio">
-                      <NavLink className="NavLink-show" to="shows/triomio">
-                        TrioMio
-                      </NavLink>
-                    </a>
-                  </li>
-                </ul>
-              </li>
+          {/* -- Dropdown menu -- */}
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#ladida">
+                <NavLink className="NavLink-show" to="shows/ladida">
+                  Ladida
+                </NavLink>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#dings">
+                <NavLink className="NavLink-show" to="shows/dings">
+                  Dings
+                </NavLink>
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#triomio">
+                <NavLink className="NavLink-show" to="shows/triomio">
+                  TrioMio
+                </NavLink>
+              </a>
+            </li>
+
+          </ul>
 
 
-
+          
+        </li>
+        
+        </div>
       </ul>
 
       <Routes>
-        {/* Client Side Routing */}
+      <Route path="/" element={<Home />} />
         <Route path="/admin" element={<AdminPanel />} />
-        <Route path="/" element={<HomePage />} />
+
         <Route path="/records" element={<Records />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

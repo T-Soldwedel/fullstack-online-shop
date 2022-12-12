@@ -1,0 +1,41 @@
+.orders-container {
+  margin-top: 3rem;
+  background-color: rgb(245, 206, 77);
+  display: flex;
+  justify-content: center;
+}
+
+.orders-container h4 {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.orders-container h5 {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.single-order-container {
+  background-color: rgb(236, 232, 232);
+  border-radius: 5px;
+  margin: 2rem;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1.5px solid black;
+}
+
+.single-order {
+  /* background-color: rgb(193, 182, 182); */
+  padding: 2rem 2rem 0 2rem;
+  text-align: center;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.single-order img {
+  width: 8rem;
+}

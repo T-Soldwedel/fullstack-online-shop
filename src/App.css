@@ -1,38 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width:none
 }
 
 body {
-  background-color: antiquewhite;
+  font-family: "Roboto", sans-serif;
+  
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 
+.navbar img {
+  width: 200px;
+  height: 50px;
+}
 
 .navbar {
+  height: fit-content;
   top: 0;
   width: 100%;
-  height: 15vh;
+  height: 10vh;
   position: sticky;
   display: flex;
   gap: 2rem;
-
-
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
+  background-color: rgb(236, 232, 232);
+}
 
-
-  background-color: rgb(105, 206, 222);
+.navlinks {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
 .navbar li {
-    list-style-type: none;
-    
-  }
+  list-style-type: none;
+}
 
 .navbar a {
   text-decoration: none;
   color: black;
+}
+.border-bottom a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid black;
 }
 
 .navbar .nav-item .dropdown-menu {
@@ -46,4 +63,3 @@ body {
 .navbar .nav-item .dropdown-menu {
   margin-top: 0;
 }
-

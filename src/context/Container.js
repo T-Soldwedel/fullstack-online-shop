@@ -10,7 +10,6 @@ export default function Container(props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    //onload event
     fetch("/records")
       .then((res) => res.json())
       .then((result) => {
