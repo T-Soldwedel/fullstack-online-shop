@@ -1,14 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  scrollbar-width:none
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  
+  min-height: 100vh;
+  position: relative;
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 11rem; /* Set same as footer's height */
 }
 
 body::-webkit-scrollbar {
@@ -28,9 +40,10 @@ body::-webkit-scrollbar {
   position: sticky;
   display: flex;
   gap: 2rem;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   background-color: rgb(236, 232, 232);
+  /* background-color: rgb(245, 206, 77) */
 }
 
 .navlinks {

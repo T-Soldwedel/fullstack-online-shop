@@ -1,5 +1,6 @@
 .home-container {
     background-image: linear-gradient(to right bottom, #f5ce4d, #ffbb65, #ffae7e, #f1a594, #d9a2a2);
+    margin-bottom: 3rem;
 }
 
 .typewriter {
@@ -37,8 +38,11 @@ rgba(217, 162, 162, 0.821)
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-  
-    background-image: linear-gradient(to right bottom, #f5ce4d, #ffbb65, #ffae7e, #f1a594, #d9a2a2);;
+  background-color: #d9a2a2;
+  background-color: #e6abab;
+  background-color: #eed0d0;
+
+    
     padding: 2rem;
     
   }

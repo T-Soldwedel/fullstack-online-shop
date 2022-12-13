@@ -1,0 +1,10 @@
+.footer-container {
+    padding: 1rem;
+    background-color: rgb(236, 232, 232);
+    display: flex;
+    height: fit-content;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+
+}

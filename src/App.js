@@ -12,6 +12,7 @@ import "./App.css";
 import AdminPanel from "./components/AdminPanel";
 import logo from "./img/logo.svg"
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 function App() {
   const { cart, user } = useContext(MyContext);
@@ -116,6 +117,8 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/editprofileuser" element={<EditProfileUser />} />
       </Routes>
+
+      <Footer></Footer>
     </div>
   );
 }

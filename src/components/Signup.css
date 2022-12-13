@@ -1,15 +1,12 @@
-
-
 .signup-container {
-  background-color: rgb(245, 206, 77);
-  margin: 2rem auto;
+  background-color: #eed0d0;
+  margin: 3rem auto;
   padding: 1rem;
   width: 45%;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 10px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  
 }
 
 .signup-container form label {

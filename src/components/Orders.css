@@ -1,6 +1,7 @@
 .orders-container {
   margin-top: 3rem;
   background-color: rgb(245, 206, 77);
+  background-color: #eed0d0;
   display: flex;
   justify-content: center;
 }
@@ -23,7 +24,7 @@
   margin: 2rem;
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border: 1.5px solid black;
+
 }
 
 .single-order {

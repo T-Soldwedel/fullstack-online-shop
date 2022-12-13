@@ -1,21 +1,63 @@
 .profile-container {
-    padding: 2rem;
     margin-top: 3rem;
-    background-color: rgba(217, 162, 162, 0.821);
-
-    
-}
-
-.profile-flex-container {
-    margin: 10rem;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-direction: row;
     flex-wrap: wrap;
-    background-color: rgb(185, 48, 48);
+    background-color: #eed0d0;
+    padding-bottom: 2rem;
 }
 
-.profile-user-details {
-    padding: 1rem;
-    background-color: blueviolet;
-    width:10rem;
+.profile-user-details{
+    padding-top: 1rem;
+    width: fit-content;
+    font-weight: 600;
 }
+
+.profile-user-details img{
+    margin-bottom: 2rem;
+}
+
+.profile-user-details button{
+    border-radius: 5px;
+    margin-right: .5rem;
+    background-color: rgb(236, 232, 232)
+}
+
+/* --- Previous Orders Container ---*/
+
+.previous-orders{
+    background-color: rgb(243, 240, 240);
+    margin-top: 1.5rem;
+    padding: 1rem;
+    width: fit-content;
+    min-width: 25rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+}
+
+.previous-orders div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+.previous-orders div p {
+    margin: auto 0;
+}
+
+.previous-orders button {
+    border-radius: 5px;
+    background-color: rgb(245, 153, 114);
+}
+
+.previous-orders h4{
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.previous-orders ul{
+    padding: 0;
+}
+

@@ -1,9 +1,15 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { MyContext } from "../context/MyContext";
+import "./Cart.css"
+
+
+
 
 export default function Cart() {
-  const { cart, setCart, user, setUser } = useContext(MyContext);
+
+
+  const { cart, setCart, user, setUser, iconMinus, iconPlus } = useContext(MyContext);
   const navigate = useNavigate();
   const decrementQuantity = (id) => {
     const foundRecord = cart.find((item) => item._id === id);
@@ -52,38 +58,38 @@ export default function Cart() {
   };
 
   return (
-    <div>
-      <h1>Cart</h1>
-      <div>
+    <div className="cart-container">
+      <h5>Cart</h5>
+      <div classname="cart-single-order">
         {cart.map((record) => {
           return (
             <div key={record._id}>
-              <img src={record.img} width="100" alt="recordimage" />
+              <img src={record.img}  alt="recordimage" />
               <p>{record.title}</p>
               <p>
                 {" "}
-                quantity:{" "}
-                <button onClick={() => decrementQuantity(record._id)}>
+                Quantity:{" "}
+                <span onClick={() => decrementQuantity(record._id)}>
                   {" "}
-                  -{" "}
-                </button>{" "}
+                  {iconMinus}{" "}
+                </span>{" "}
                 {record.quantity}{" "}
-                <button onClick={() => incrementQuantity(record._id)}>
+                <span onClick={() => incrementQuantity(record._id)}>
                   {" "}
-                  +{" "}
-                </button>
+                  {iconPlus}{" "}
+                </span>
               </p>
-              <h1>${record.price}</h1>
+              <h5>${record.price}</h5>
             </div>
           );
         })}
       </div>
 
-      <h1>
+      <h5>
         Total:{" "}
         {cart.reduce((acc, item) => (acc += item.price * item.quantity), 0)}
-      </h1>
-      <button onClick={placeOrder}>Place Order</button>
+      </h5>
+      <button className="cart-place-order" onClick={placeOrder}>Place Order</button>
     </div>
   );
 }

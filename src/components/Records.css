@@ -5,17 +5,16 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-
   background-color: rgb(245, 206, 77);
+  background-color: #eed0d0;
   padding: 2rem;
-  
+  margin-bottom: 3rem;
 }
 
 .single-product {
   width: 18rem;
   height: fit-content;
   padding: 1rem;
-  background-color: rgb(255, 255, 255);
   margin-bottom: 1rem;
   border-radius: 2px;
   color: rgb(0, 0, 0);
